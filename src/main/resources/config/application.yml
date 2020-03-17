@@ -1,0 +1,29 @@
+spring:
+  cloud:
+    stream:
+      function:
+        definition: supplier
+      bindings:
+        supplier-out-0:
+          destination: someTopic
+solace:
+  java:
+    host: localhost:55555
+    msgVpn: default
+    clientUsername: admin
+    clientPassword: admin
+    connectRetries: -1
+    reconnectRetries: -1
+logging:
+  level:
+    root: warn
+    org:
+      springframework: warn
+server:
+  port: 8080
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+

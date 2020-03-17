@@ -1,0 +1,11 @@
+# SCS Dyanamic Example
+
+This shows how there is a resource leak with Spring Integration Channels when you 
+send each message to a dynamic topic.
+
+Right now it's configured to be used with Rabbit, but you can switch to Solace
+by switching to the sol-pom.xml file.
+
+You can watch the leak happen using Prometheus and Grafana.
+
+
